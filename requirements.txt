@@ -1,0 +1,15 @@
+To generate the requirements.txt file, we need to identify the package requirements in the given Python code. 
+
+Based on the code, the package requirements are as follows:
+
+- requests
+- matplotlib
+
+You can create a requirements.txt file with these requirements by running the following command in your terminal or command line:
+
+```
+$ echo "requests" > requirements.txt
+$ echo "matplotlib" >> requirements.txt
+```
+
+This will create a requirements.txt file with the specified package requirements.
