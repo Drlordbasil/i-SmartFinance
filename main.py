@@ -38,7 +38,7 @@ class FinanceAnalyzer:
 
     def analyze(self, category):
         data = self.financial_data.get(category)
-        
+
         if data:
             print(f"Your {category}: {data}")
         else:
@@ -62,23 +62,26 @@ class BudgetAssistant:
         self.income = income
         self.financial_goals = financial_goals
         self.expenses = expenses
-        
+
         self.suggested_cost_cutting_measures = []
 
     def create_personalized_budget(self):
         total_expenses = sum(self.expenses)
         savings = self.income - total_expenses
-        print(f"Based on your income of {self.income} and expenses of {total_expenses}, your savings can be {savings}.")
+        print(
+            f"Based on your income of {self.income} and expenses of {total_expenses}, your savings can be {savings}.")
 
     def suggest_cost_cutting_measures(self):
         print("Here are some potential cost-cutting measures:")
-        
+
         for expense in self.expenses:
             if expense > self.income * 0.2:
-                self.suggested_cost_cutting_measures.append(f"Reduce {expense} by 10%")
+                self.suggested_cost_cutting_measures.append(
+                    f"Reduce {expense} by 10%")
             else:
-                self.suggested_cost_cutting_measures.append(f"Cut {expense} by 5%")
-        
+                self.suggested_cost_cutting_measures.append(
+                    f"Cut {expense} by 5%")
+
         for suggestion in self.suggested_cost_cutting_measures:
             print(suggestion)
 
@@ -110,11 +113,12 @@ class RealTimeMonitor:
             finance_analyzer.analyze_expenses()
             finance_analyzer.analyze_savings()
             finance_analyzer.analyze_investment_portfolio()
-            
+
             self.budget_assistant.create_personalized_budget()
             self.budget_assistant.suggest_cost_cutting_measures()
 
-            investment_recommendation = InvestmentRecommendation('high', 'long-term', 'retirement')
+            investment_recommendation = InvestmentRecommendation(
+                'high', 'long-term', 'retirement')
             investment_recommendation.evaluate_investment_profile()
             investment_recommendation.provide_recommendations()
 
@@ -200,8 +204,10 @@ real_time_monitor.monitor_financial_data()
 payment_gateway = "YOUR_PAYMENT_GATEWAY"
 expense_management = "YOUR_EXPENSE_MANAGEMENT_TOOL"
 account = "YOUR_BANK_ACCOUNT"
-financial_automation = FinancialAutomation(payment_gateway, expense_management, account)
-financial_automation.automate_bill_payments(['electricity', 'water', 'internet'])
+financial_automation = FinancialAutomation(
+    payment_gateway, expense_management, account)
+financial_automation.automate_bill_payments(
+    ['electricity', 'water', 'internet'])
 financial_automation.automate_account_reconciliation()
 financial_automation.automate_expense_tracking()
 
